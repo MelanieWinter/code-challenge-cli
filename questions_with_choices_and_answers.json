@@ -1,0 +1,503 @@
+[
+  {
+    "question": "1. JavaScript is the programming language of the _____.",
+    "choices": [
+      "Desktop",
+      "Mobile",
+      "Web",
+      "Server"
+    ],
+    "answer": "Web"
+  },
+  {
+    "question": "2. Which type of JavaScript language is _____?",
+    "choices": [
+      "Object-oriented",
+      "Object-based",
+      "Functional programming",
+      "All of the above"
+    ],
+    "answer": "Object-based"
+  },
+  {
+    "question": "3. Which of the following statement(s) is true about the JavaScript?",
+    "choices": [
+      "It is a scripting language used to make the website interactive",
+      "It is an advanced version of Java for Desktop and Mobile application development",
+      "It is a markup language of Java to develop the webpages",
+      "All of the above"
+    ],
+    "answer": "It is a scripting language used to make the website interactive"
+  },
+  {
+    "question": "4. In which HTML element, we put the JavaScript code?",
+    "choices": [
+      "<javascript>...</javascript>",
+      "<js>...</js>",
+      "<script>...</script>",
+      "<css>...</css>"
+    ],
+    "answer": "<script>...</script>"
+  },
+  {
+    "question": "5. JavaScript code can be written in ____.",
+    "choices": [
+      "JavaScript file (.js file)",
+      "HTML document directly",
+      "JavaScript file and in HTML document directly",
+      "In style sheets (.css file)"
+    ],
+    "answer": "JavaScript file and in HTML document directly"
+  },
+  {
+    "question": "6. Which symbol is used separate JavaScript statements?",
+    "choices": [
+      "Comma (,)",
+      "Colon (:)",
+      "Hyphen (_)",
+      "Semicolon (;)"
+    ],
+    "answer": "Semicolon (;)"
+  },
+  {
+    "question": "7. JavaScript ignores?",
+    "choices": [
+      "newlines",
+      "tabs",
+      "spaces",
+      "All of the above"
+    ],
+    "answer": "All of the above"
+  },
+  {
+    "question": "8. Which is the correct syntax to call an external JavaScript file in the current HTML document?",
+    "choices": [
+      "<script src=\"jsfile.js\"></script>",
+      "<script href=\" jsfile.js\"></script>",
+      "<import src=\" jsfile.js\"></import>",
+      "<script link=\" jsfile.js\"></script>"
+    ],
+    "answer": "<script src=\"jsfile.js\"></script>"
+  },
+  {
+    "question": "9. Which JavaScript method is used to access an HTML element by id?",
+    "choices": [
+      "getElementById()",
+      "getElement(id)",
+      "getElementById(id)",
+      "elementById(id)"
+    ],
+    "answer": "getElementById(id)"
+  },
+  {
+    "question": "10. Which property is used to define the HTML content to an HTML element with a specific id?",
+    "choices": [
+      "innerText",
+      "innerContent",
+      "elementText",
+      "innerHTML"
+    ],
+    "answer": "innerHTML"
+  },
+  {
+    "question": "11. Which JavaScript method is used to write HTML output?",
+    "choices": [
+      "document.write()",
+      "document.output()",
+      "console.log()",
+      "document.writeHTML()"
+    ],
+    "answer": "document.write()"
+  },
+  {
+    "question": "12. Which JavaScript method is used to write on browser's console?",
+    "choices": [
+      "console.write()",
+      "console.output()",
+      "console.log()",
+      "console.writeHTML()"
+    ],
+    "answer": "console.log()"
+  },
+  {
+    "question": "13. Which JavaScript method is used to write into an alert box?",
+    "choices": [
+      "window.alertHTML()",
+      "window.alert()",
+      "window.alertBox()",
+      "window.alertContent()"
+    ],
+    "answer": "window.alert()"
+  },
+  {
+    "question": "14. Which is the correct JavaScript statement to display \"Hello Boss!\" into an alert box?",
+    "choices": [
+      "alert(\"Hello Boss!\");",
+      "alert('Hello Boss!');",
+      "alert(Text:'Hello Boss!');",
+      "Both A. and B."
+    ],
+    "answer": "Both A. and B."
+  },
+  {
+    "question": "15. Which is the correct JavaScript statement to print the addition of two numbers 10 and 20 in a paragraph whose id is 'result'?",
+    "choices": [
+      "getElementById(\"result\").innerHTML = 10+20;",
+      "getElementById(\"result\").innerHTML = \"10+20\";",
+      "getElementById(\"#result\").innerHTML = 10+20;",
+      "All of the above"
+    ],
+    "answer": "getElementById(\"result\").innerHTML = 10+20;"
+  },
+  {
+    "question": "17. In JavaScript, single line comment begins with ___.",
+    "choices": [
+      "#",
+      "/*",
+      "$",
+      "//"
+    ],
+    "answer": "//"
+  },
+  {
+    "question": "18. In JavaScript, multi-line comments start with __ and end with ___.",
+    "choices": [
+      "/* and */",
+      "<!—and -->",
+      "## and ##",
+      "// and //"
+    ],
+    "answer": "/* and */"
+  },
+  {
+    "question": "19. Which JavaScript keyword is used to declare a variable?",
+    "choices": [
+      "Var",
+      "var",
+      "Let",
+      "All of the above"
+    ],
+    "answer": "var"
+  },
+  {
+    "question": "20. How many keywords are there in JavaScript to declare variables or constants?",
+    "choices": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "answer": "3"
+  },
+  {
+    "question": "21. What is the main difference between var and let keywords in JavaScript?",
+    "choices": [
+      "var defines a variable while let defines a constant",
+      "var defined function scoped variable while let define block scoped variable",
+      "The value of a variable declared with var can be changed while the value of a variable declared with let cannot be changed",
+      "All of the above"
+    ],
+    "answer": "var defined function scoped variable while let define block scoped variable"
+  },
+  {
+    "question": "22. The const keyword is used to define a ______.",
+    "choices": [
+      "Function scopes variable",
+      "Block scoped variable",
+      "Constant",
+      "Constant with no initial value"
+    ],
+    "answer": "Constant"
+  },
+  {
+    "question": "23. Which is the correct syntax to declare a constant in JavaScript?",
+    "choices": [
+      "const constant_name;",
+      "constant_name const;",
+      "constant_name const = value;",
+      "const constant_name = value;"
+    ],
+    "answer": "const constant_name = value;"
+  },
+  {
+    "question": "25. What is the default value of an uninitialized variable?",
+    "choices": [
+      "0",
+      "undefined",
+      "null",
+      "NaN"
+    ],
+    "answer": "undefined"
+  },
+  {
+    "question": "27. Can be redeclare a variable that is declared with var keyword?",
+    "choices": [
+      "Yes",
+      "No"
+    ],
+    "answer": "Yes"
+  },
+  {
+    "question": "30. Can be redeclare a variable that is declared with let keyword?",
+    "choices": [
+      "Yes",
+      "No"
+    ],
+    "answer": "No"
+  },
+  {
+    "question": "32. Which is the exponentiation operator in JavaScript?",
+    "choices": [
+      "exp()",
+      "^",
+      "**",
+      "pow"
+    ],
+    "answer": "**"
+  },
+  {
+    "question": "33. Does JavaScript support increment (++) and decrements (--) Operators?",
+    "choices": [
+      "Yes",
+      "No"
+    ],
+    "answer": "Yes"
+  },
+  {
+    "question": "37. JavaScript types are _____.",
+    "choices": [
+      "Static",
+      "Dynamic"
+    ],
+    "answer": "Dynamic"
+  },
+  {
+    "question": "38. JavaScript arrays are written with _____.",
+    "choices": [
+      "round brackets ()",
+      "curly brackets {}",
+      "double quotes \"\"",
+      "square brackets []"
+    ],
+    "answer": "square brackets []"
+  },
+  {
+    "question": "39. JavaScript objects are written with _____.",
+    "choices": [
+      "round brackets ()",
+      "curly brackets {}",
+      "double quotes \"\"",
+      "square brackets []"
+    ],
+    "answer": "curly brackets {}"
+  },
+  {
+    "question": "40. Which JavaScript operator is used to determine the type of a variable?",
+    "choices": [
+      "typeof",
+      "TypeOf",
+      "typeOf",
+      "sizeof"
+    ],
+    "answer": "typeof"
+  },
+  {
+    "question": "41. Which is the correct syntax of JavaScript typeof operator?",
+    "choices": [
+      "typeof variable/value",
+      "typeof(variable/value)",
+      "Both A. and B.",
+      "None of the above"
+    ],
+    "answer": "Both A. and B."
+  },
+  {
+    "question": "43. Which keyword is used to define a JavaScript function?",
+    "choices": [
+      "module",
+      "fun",
+      "func",
+      "function"
+    ],
+    "answer": "function"
+  },
+  {
+    "question": "44. Which is the correct syntax for the function definition?",
+    "choices": [
+      "return_type function function_name(parameter1, parameter2, ...) { /*Function's body*/ }",
+      "function function_name(parameter1, parameter2, ...) { /*Function's body*/ }",
+      "return_type function_name(parameter1, parameter2, ...) { /*Function's body*/ }",
+      "function function_name(parameter1, parameter2, ...) as return_type { /*Function's body*/ }"
+    ],
+    "answer": "function function_name(parameter1, parameter2, ...) { /*Function's body*/ }"
+  },
+  {
+    "question": "46. Can we use a function as a variable value?",
+    "choices": [
+      "Yes",
+      "No"
+    ],
+    "answer": "Yes"
+  },
+  {
+    "question": "47. In JavaScript a variable contains one value while an object may contain ___.",
+    "choices": [
+      "One value",
+      "Two values",
+      "Three values",
+      "Many values"
+    ],
+    "answer": "Many values"
+  },
+  {
+    "question": "48. Which is the correct syntax to access an object property in JavaScript?",
+    "choices": [
+      "objectName:propertyName",
+      "propertyName",
+      "objectName[\"propertyName\"]",
+      "Both B. and C."
+    ],
+    "answer": "Both B. and C."
+  },
+  {
+    "question": "49. Which property is used to get the length of a string in JavaScript?",
+    "choices": [
+      "strlen",
+      "len",
+      "length",
+      "Length"
+    ],
+    "answer": "length"
+  },
+  {
+    "question": "51. Which character is used to break up a code line within a text string in JavaScript?",
+    "choices": [
+      "Single quote (')",
+      "Single backslash (\\)",
+      "Double quote (\")",
+      "Tipple single quote (''')"
+    ],
+    "answer": "Single backslash (\\)"
+  },
+  {
+    "question": "53. Which is the correct JavaScript statement to define string as object?",
+    "choices": [
+      "var s = new String(\"IncludeHelp!\");",
+      "var s = String(\"IncludeHelp!\");",
+      "var s = \"IncludeHelp!\"",
+      "All of the above"
+    ],
+    "answer": "var s = new String(\"IncludeHelp!\");"
+  },
+  {
+    "question": "55. Which is/are the valid JavaScript method(s) to extract string parts?",
+    "choices": [
+      "slice(start, end)",
+      "substring(start, end)",
+      "substr(start, length)",
+      "All of the above"
+    ],
+    "answer": "All of the above"
+  },
+  {
+    "question": "57. In JavaScript, the string template literals use ____ rather than the quotes (\"\") to define a string?",
+    "choices": [
+      "Single quotes ('')",
+      "Backslash with single quote (\\’'\\')",
+      "Backslashes (\\\\)",
+      "Back-ticks (``)"
+    ],
+    "answer": "Back-ticks (``)"
+  },
+  {
+    "question": "59. Which JavaScript method is used to get a number as a string?",
+    "choices": [
+      "toString()",
+      "intToString()",
+      "parseInteger()",
+      "All of the above"
+    ],
+    "answer": "toString()"
+  },
+  {
+    "question": "67. Which JavaScript method is used to call a function (a callback function) once for each array element?",
+    "choices": [
+      "for()",
+      "traverse()",
+      "forEach()",
+      "foreach()"
+    ],
+    "answer": "forEach()"
+  },
+  {
+    "question": "70. Which JavaScript method is used to create a new array with array elements that passes a test?",
+    "choices": [
+      "forEach()",
+      "map()",
+      "forMap()",
+      "filter()"
+    ],
+    "answer": "filter()"
+  },
+  {
+    "question": "71. Which JavaScript object works with the dates?",
+    "choices": [
+      "Date",
+      "DateTime",
+      "date",
+      "dateTime"
+    ],
+    "answer": "Date"
+  },
+  {
+    "question": "72. Which JavaScript statement(s) is correct to create Date object(s) with new Date() constructor?",
+    "choices": [
+      "new Date()",
+      "new Date(year, month, day, hours, minutes, seconds, milliseconds)",
+      "new Date(milliseconds)",
+      "new Date(date string)",
+      "All of the above"
+    ],
+    "answer": "All of the above"
+  },
+  {
+    "question": "74. Which JavaScript method is used to convert a date to a UTC string (a date display standard)?",
+    "choices": [
+      "toUTCString()",
+      "toUtcString()",
+      "utcString()",
+      "toutcstring()"
+    ],
+    "answer": "toUTCString()"
+  },
+  {
+    "question": "75. The internal clock in JavaScript counts from midnight _____.",
+    "choices": [
+      "January 1, 1972",
+      "January 1, 1947",
+      "January 1, 1980",
+      "January 1, 1970"
+    ],
+    "answer": "January 1, 1970"
+  },
+  {
+    "question": "76. What does the Date object's method getTime() return?",
+    "choices": [
+      "Date in DD-MM-YYYY format",
+      "Date in DD MON YYYY format",
+      "Date in MON, DD YYYY format",
+      "Number of milliseconds since January 1, 1970"
+    ],
+    "answer": "Number of milliseconds since January 1, 1970"
+  },
+  {
+    "question": "77. Which method is used to get the year of a date as a four-digit number?",
+    "choices": [
+      "getYear()",
+      "fullYear()",
+      "getFullYear()",
+      "getfullyear()"
+    ],
+    "answer": "getFullYear()"
+  }
+]
