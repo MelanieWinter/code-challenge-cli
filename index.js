@@ -1,39 +1,108 @@
-import puppeteer from "puppeteer";
-import fs from "fs/promises";
+#!/usr/bin/env node
 
-async function start() {
-    const browser = await puppeteer.launch();
-    const page = await browser.newPage();
-    await page.goto("https://www.includehelp.com/mcq/javascript-multiple-choice-questions-mcqs.aspx");
+import fs from 'fs/promises';
+import inquirer from 'inquirer';
+import figlet from 'figlet';
+import gradient from 'gradient-string';
+import chalk from 'chalk';
+import chalkAnimation from 'chalk-animation';
+import { createSpinner } from 'nanospinner';
 
-    const questionsWithChoices = await page.$$eval('p > b', elements => {
-        return elements.map(element => {
-            const text = element.textContent.trim();
-            const olElement = element.closest('p').nextElementSibling;
-            if (olElement && olElement.tagName === 'OL') {
-                const choiceElements = Array.from(olElement.querySelectorAll('li'));
-                const choices = choiceElements.map(choiceElement => choiceElement.textContent.trim());
-                const answerElement = olElement.nextElementSibling;
-                let answer = null;
-                if (answerElement && answerElement.tagName === 'P') {
-                    const boldTag = answerElement.querySelector('b');
-                    if (boldTag && boldTag.textContent.trim() === 'Answer:') {
-                        answer = boldTag.nextSibling.textContent.trim();
-                        answer = answer.replace(/^[A-Z]\)\s*/, '');
-                    }
-                }
-                return {
-                    question: text,
-                    choices: choices,
-                    answer: answer
-                };
-            }
-        }).filter(Boolean); 
-    });
+let playerName;
+const sleep = (ms = 2000) =>  new Promise((r) => setTimeout(r, ms))
 
-    await fs.writeFile('questions_with_choices_and_answers.json', JSON.stringify(questionsWithChoices, null, 2));
+async function welcome() {
+    const rainbowTitle = chalkAnimation.rainbow(
+        "77 JavaScript Questions\n"
 
-    await browser.close();
+    )
+    await sleep()
+    rainbowTitle.stop()
+
+    console.log(`
+        ${chalk.bgBlue('HOW TO PLAY')}
+        Choose the correct answer
+    `)
 }
 
-start();
+async function loadQuestions() {
+    try {
+        const data = await fs.readFile('questions_with_choices_and_answers.json', 'utf-8');
+        return JSON.parse(data);
+    } catch (error) {
+        console.error('Error loading questions:', error);
+        process.exit(1);
+    }
+}
+
+async function askName() {
+    const answers = await inquirer.prompt({
+        name: 'player_name',
+        type: 'input',
+        message: 'What is your name?',
+        default() {
+            return 'Player';
+        },
+    });
+    return answers.player_name;
+}
+
+async function askQuestion(question) {
+    const answers = await inquirer.prompt({
+        name: 'selected_answer',
+        type: 'list',
+        message: question.question,
+        choices: question.choices,
+    });
+    return answers.selected_answer === question.answer;
+}
+
+async function handleQuestion(question) {
+    const isCorrect = await askQuestion(question);
+    const spinner = createSpinner('Checking answer...').start();
+    await sleep()
+    if (isCorrect) {
+        spinner.success({
+            text: `Nice work ${playerName}.`
+        })
+    } else {
+        spinner.error({
+            text: `☠️ Game over, you lose ${playerName}! ☠️`
+        })
+        process.exit(1)
+    }
+    return isCorrect;
+}
+
+async function main() {
+    await welcome();
+    playerName = await askName();
+    const questions = await loadQuestions();
+    let allCorrect = true; // Track if all questions are answered correctly
+    for (let i = 0; i < questions.length; i++) {
+        console.log(`\nQuestion ${i + 1}/${questions.length}:`);
+        const isCorrect = await handleQuestion(questions[i]);
+        if (!isCorrect) {
+            allCorrect = false; 
+            break; 
+        }
+    }
+    if (allCorrect) {
+        winner(); 
+    } else {
+        console.log(chalk.red(figlet.textSync(`Game Over ${playerName}!`, { horizontalLayout: 'full' })));
+    }
+}
+
+function winner() {
+    console.clear()
+    const msg = `Congrats ${playerName},\n
+    you win\n
+    $1,000,000!!!`
+
+    figlet(msg, (err, data) => {
+        console.log(gradient.fruit.multiline(data))
+    })
+}
+
+main();

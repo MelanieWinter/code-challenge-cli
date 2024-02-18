@@ -3,9 +3,9 @@
   "name": "thisisnotaveryfungameyourewelcome",
   "version": "1.0.2",
   "description": "",
-  "main": "./multichoice.js",
+  "main": "./index.js",
   "bin": {
-    "notfun": "./multichoice.js"
+    "notfun": "./index.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
