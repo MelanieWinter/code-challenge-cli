@@ -3,7 +3,7 @@
   "name": "thisisnotaveryfungameyourewelcome",
   "version": "1.0.1",
   "description": "",
-  "main": "index.js",
+  "main": "./multichoice.js",
   "bin": {
     "notfun": "./multichoice.js"
   },
